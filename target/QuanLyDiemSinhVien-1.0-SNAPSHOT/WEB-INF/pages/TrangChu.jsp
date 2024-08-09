@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>QUẢN LÝ ĐIỂM SINH VIÊN</title>
@@ -7,32 +8,32 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navbar -->
-       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">QUẢN LÝ ĐIỂM SINH VIÊN</a>
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Quản Lý Điểm Sinh Viên</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Trang chủ <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="<c:url value='/'/>">Trang chủ <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="http://localhost:8080/QuanLyDiemSinhVien/dssv">Sinh viên</a>
+                    <a class="nav-link" href="<c:url value='/dssv'/>">Sinh viên</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Lớp</a>
-                </li> <li class="nav-item">
-                    <a class="nav-link" href="#">Môn học</a>
+                    <a class="nav-link" href="<c:url value='/dslop'/>">Lớp</a>
                 </li>
-                 <li class="nav-item">
-                    <a class="nav-link" href="#">Điểm</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="<c:url value='/monhoc'/>">Môn học</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<c:url value='/diem'/>">Điểm</a>
                 </li>
             </ul>
         </div>
     </nav>
-
     <!-- Nội dung chính -->
     <div class="container">
         <h1 class="text-center my-4">QUẢN LÝ ĐIỂM SINH VIÊN</h1>
